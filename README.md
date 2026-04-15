@@ -1,4 +1,4 @@
-# Consultation Booking System
+# ІО-31 Григорчук Денис  |  Consultation Booking System
 
 ## Опис проєкту
 
@@ -97,6 +97,8 @@ flowchart LR
     Admin --> UC7
 ```
 
+## ER Diagram
+```mermaid
 erDiagram
     CLIENT ||--o{ APPOINTMENT : makes
     CONSULTATION ||--o{ APPOINTMENT : includes
@@ -124,15 +126,18 @@ erDiagram
         string time
         string status
     }
+```
 
-**Як запустити проєкт**
-1.Встановити залежності:
+## Як запустити проєкт
+1. Встановити залежності:
 npm install
-2.Запустити сервер:
+2. Запустити сервер:
 node server/server.js
-3.Відкрити у браузері:
+3. Відкрити у браузері:
 http://localhost:3000
 
-**Висновок**
+---
+
+## Висновок
 
 У ході виконання лабораторної роботи було розроблено адаптивний веб-застосунок для запису на консультації. Проєкт містить зручний інтерфейс, форму запису, список записів і REST API для CRUD-операцій. Під час виконання роботи було закріплено навички роботи з HTML, CSS, JavaScript, Node.js, Express.js, а також базового аналізу та моделювання системи.
