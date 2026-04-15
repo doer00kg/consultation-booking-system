@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultation Booking System</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header">
+  <div class="logo">Consultation Booking</div>
+
+  <button class="menu-toggle" aria-label="Відкрити меню">☰</button>
+
+  <nav class="nav">
+    <a href="#">Головна</a>
+    <a href="#">Консультації</a>
+    <a href="#">Запис</a>
+    <a href="#">Контакти</a>
+  </nav>
+</header>
+
+  <main class="main">
+    <section class="hero">
+      <h1>Система запису на консультації</h1>
+      <p>Зручний сервіс для швидкого запису на консультації.</p>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h2>Career Consultation</h2>
+        <p>Перевірка CV та поради для кар’єри.</p>
+      </article>
+      <article class="card">
+        <h2>Study Consultation</h2>
+        <p>Підготовка до іспитів та навчальний план.</p>
+      </article>
+      <article class="card">
+        <h2>Technical Consultation</h2>
+        <p>Допомога з кодом та проєктами.</p>
+      </article>
+    </section>
+
+    <section class="form-section">
+      <h2>Записатися на консультацію</h2>
+      <form class="booking-form">
+        <input type="text" placeholder="Ваше ім'я">
+        <input type="email" placeholder="Email">
+        <input type="date">
+        <input type="time">
+        <button type="submit">Записатися</button>
+      </form>
+    </section>
+
+    <section class="bookings-section">
+        <h2>Записи на консультації</h2>
+        <div id="bookings-list" class="bookings-list"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Consultation Booking System</p>
+  </footer>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>
