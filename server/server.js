@@ -1,3 +1,4 @@
+const { sequelize, Client, Appointment } = require('../models');
 const connectDB = require('../config/database');
 const express = require("express");
 const path = require("path");
@@ -50,10 +51,13 @@ app.delete("/consultations/:id", (req, res) => {
   res.json(deleted[0]);
 });
 
-connectDB().then(async (connection) => {
-  const [rows] = await connection.execute('SELECT * FROM clients');
-  console.log('Clients from DB:', rows);
-});
+sequelize.sync()
+  .then(() => {
+    console.log('Sequelize synced');
+  })
+  .catch((error) => {
+    console.error('Sequelize error:', error);
+  });
 
 app.listen(3000, () => {
   console.log("Server started on http://localhost:3000");
