@@ -1,3 +1,4 @@
+const connectDB = require('../config/database');
 const express = require("express");
 const path = require("path");
 
@@ -47,6 +48,11 @@ app.delete("/consultations/:id", (req, res) => {
 
   const deleted = consultations.splice(index, 1);
   res.json(deleted[0]);
+});
+
+connectDB().then(async (connection) => {
+  const [rows] = await connection.execute('SELECT * FROM clients');
+  console.log('Clients from DB:', rows);
 });
 
 app.listen(3000, () => {
