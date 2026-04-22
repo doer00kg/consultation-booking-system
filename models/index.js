@@ -10,3 +10,12 @@ module.exports = {
   Client,
   Appointment
 };
+
+const User = require('./User');
+
+module.exports = {
+  sequelize,
+  Client,
+  Appointment,
+  User
+};
