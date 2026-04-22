@@ -52,8 +52,11 @@ app.delete("/consultations/:id", (req, res) => {
 });
 
 sequelize.sync()
-  .then(() => {
+  .then(async () => {
     console.log('Sequelize synced');
+
+    const clients = await Client.findAll();
+    console.log('Clients from Sequelize:', JSON.stringify(clients, null, 2));
   })
   .catch((error) => {
     console.error('Sequelize error:', error);
