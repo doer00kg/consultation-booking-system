@@ -2,11 +2,13 @@ const { sequelize, Client, Appointment } = require('../models');
 const connectDB = require('../config/database');
 const express = require("express");
 const path = require("path");
+const authRoutes = require('../routes/authRoutes');
 
 const app = express();
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "..")));
+app.use('/api', authRoutes);
 
 const consultations = [
   { id: 1, name: "Career consultation", topic: "CV review", time: "10:00" },
